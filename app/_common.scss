@@ -1,0 +1,12 @@
+$font-size: (
+  "mobile": 16px,
+  "tablet": 30px,
+  "desktop": 40px,
+  "buttonTxt": 20px,
+);
+
+@mixin flexbox($jc) {
+  display: flex;
+  justify-content: $jc;
+  align-items: center;
+}
