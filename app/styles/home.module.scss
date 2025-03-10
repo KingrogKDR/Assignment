@@ -1,0 +1,46 @@
+/* 
+Topics: 
+
+1. Variables
+2. Nesting
+3. Operators
+4. Maps
+5. Ampersand -> &
+6. Mixins
+7. Extend (works like mixin but without arguments; inheritance is used)
+8. Partials
+
+*/
+
+@import "common";
+
+.header {
+  padding: 36px;
+  border-bottom: 4px solid #f5f5f5;
+  @include flexbox(space-between);
+
+  .addUser {
+    @include flexbox(center);
+    gap: 16px;
+    padding: 12px 16px 12px 16px;
+    border-radius: 12px;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: map-get($map: $font-size, $key: "buttonTxt");
+    
+    &:hover {
+      scale: 1.05;
+      transition: ease-in- out 300ms;
+    }
+  }
+}
+
+@include responsiveTitle("desktop");
+
+@media screen and (max-width: 640px) {
+  @include responsiveTitle("mobile");
+}
+
+@media screen and (min-width: 640px) and (max-width: 1280px) {
+  @include responsiveTitle("tablet");
+}

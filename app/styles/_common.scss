@@ -10,3 +10,28 @@ $font-size: (
   justify-content: $jc;
   align-items: center;
 }
+
+@mixin responsiveTitle($key){
+  .title {
+    font-size: map-get($map: $font-size, $key: $key);
+  }
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

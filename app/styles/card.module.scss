@@ -1,0 +1,48 @@
+@import "common";
+
+.card {
+  background: white;
+  padding: 20px 35px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 150px;
+  transition: transform 0.2s ease-in-out;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .userName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+  }
+
+  .userAge {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .edit {
+    @extend .button;
+    background-color: #0070f3;
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+
+  .delete {
+    @extend .button;
+    background-color: rgb(207, 32, 67);
+    &:hover {
+      background-color: rgba(233, 35, 75, 0.8);
+    }
+  }
+}
